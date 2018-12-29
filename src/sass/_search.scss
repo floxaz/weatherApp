@@ -1,0 +1,169 @@
+.search {
+    max-width: 60rem;
+    margin: 0 auto;
+
+    display: flex;
+
+    @media only screen and (max-width: $bp-lmedium) {
+        //display: none;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        max-width: 50rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        max-width: 40rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        //display: none;
+    }
+
+    @media only screen and (max-width: $bp-toosmall) {
+        margin: 0 1rem;
+    }
+
+    & > *:not(:last-child) {
+        margin-right: 1rem;
+        
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__city {
+        flex-basis: 35rem;
+        flex-grow: 1;
+    }
+
+    &__country {
+        flex-basis: 20rem;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-basis: 100%;
+        }
+    }
+
+    &__city,
+    &__country,
+    &__city-mob,
+    &__country-mob {
+        border: none;
+        font-size: 1.8rem;
+        font-family: $font-header;
+        color: #fff;
+        padding: 1rem 2rem;
+        min-width: 0;
+        flex-shrink: 1;
+
+        background-color: transparent;
+        border-bottom: $border-bottom;
+        transition: border .2s ease-in;
+        z-index: 1;
+        position: relative;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__city::placeholder,
+    &__country::placeholder,
+    &__city-mob::placeholder,
+    &__country-mob::placeholder {
+        font-family: $font-header;
+        font-weight: 300;
+        font-style: italic;
+        color: rgba(#fff, .3);
+    }
+
+    &__btn,
+    &__btnMob {
+        flex-basis: 5rem;
+        flex-grow: 1;
+        border: none;
+        cursor: pointer;
+        background-color: rgba($color-violet-2, .5);
+        border-radius: 10px;
+        transition: all .4s ease-in-out;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-basis: 20rem;
+            flex-grow: 0;
+            background-color: #fff;
+            padding: 1rem 0;
+            border-radius: 100px;
+        }
+    }
+
+    &__btn:hover,
+    &__btn:focus,
+    &__btnMob:hover,
+    &__btnMob:focus {
+        background-color: #fff;
+        //box-shadow: 0 .2rem 3rem rgba($color-violet-2, .5);
+    }
+
+    &__btn:hover &__icon,
+    &__btn:focus &__icon {
+        fill: $color-violet-2;
+        transform: scale(1.4);
+
+        
+        @media only screen and (max-width: $bp-small) {
+            //fill: rgba(#fff, .8);
+            transform: none;
+        }
+    }
+
+    &__btn:active,
+    &__btnMob:active {
+        transform: translateY(3px);
+    }
+
+    &__btn:active &__icon {
+        @media only screen and (max-width: $bp-small) {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        fill: rgba(#fff, .4);
+        transition: all .4s;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 4rem;
+            height: 4rem;
+            fill: $color-violet-2;
+        }
+    }
+
+    &__city:focus,
+    &__country:focus,
+    &__city-mob:focus,
+    &__country-mob:focus {
+        border-bottom: 3px solid #fff;
+    }
+
+    &__city:focus,
+    &__country:focus,
+    &__city-mob:focus,
+    &__country-mob:focus,
+    &__btn:focus,
+    &__btnMob:focus {
+        outline: none;
+    }
+
+    &--unvisible {
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+    }
+}

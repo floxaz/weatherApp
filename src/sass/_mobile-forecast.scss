@@ -1,0 +1,118 @@
+.mobile-forecast {
+    max-width: 60rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 0;
+    //background-color: rgba($color-violet-1, .8);
+    font-family: $font-header;
+    border-radius: 5px;
+    display: none;
+
+    @media only screen and (max-width: $bp-lmedium) {
+        //display: block;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        max-width: $color-violet-1;
+    }
+
+    & > * {
+        background-color: rgba($color-violet-1, .8);
+    }
+
+    &__today {
+        padding: 1rem;
+        border-bottom: $border-bottom;
+        position: relative;
+    }
+
+    &__main-temp {
+        font-size: 10rem;
+        font-weight: 300;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__main-condition {
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        top: 44%;
+        left: 55%;
+
+        
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    &__main-date {
+        font-size: 2rem;
+        color: rgba(#fff, .7);
+    }
+
+    &__others {
+        padding: 1rem;
+    }
+
+    &__day {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding-bottom: 2rem;
+    }
+
+    &__date {
+        font-size: 2rem;
+        color: #fff;
+        margin-right: auto;
+    }
+
+    &__condition {
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__max,
+    &__min {
+        font-size: 2rem;
+    }
+
+    &__max {
+        margin-right: 10%;
+        color: #fff;
+    }
+
+    &__min {
+        color: rgba(#fff, .5);
+    }
+
+    &--appeared {
+        @media only screen and (max-width: $bp-small) {
+            display: block;
+        }
+    }
+
+    &__loader {
+        fill: rgba(#fff, .5);
+        width: 4rem;
+        height: 4rem;
+        animation: rotate 1.5s infinite linear;
+        background-color: transparent !important;
+        display: block;
+        margin: 0 auto;
+    }
+}

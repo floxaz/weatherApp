@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <title>Weather App</title>
+    </head>
+    <body>
+        <nav class="mobile-nav">
+            <input type="checkbox" class="mobile-nav__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="mobile-nav__button">
+                    <svg class="search__icon mobile-nav__icon">
+                        <use href="img/symbol-defs.svg#icon-search"></use>
+                    </svg>
+            </label>
+            
+            <form class="mobForm">
+                    <input type="text" class="search__city-mob" maxlength="20" placeholder="city">
+                    <input type="text" class="search__country-mob" maxlength="3" placeholder="country">
+                    <button class="search__btnMob">
+                            <svg class="search__icon">
+                                <use xlink:href="img/symbol-defs.svg#icon-search"></use>
+                            </svg>
+                    </button>
+            </form>
+        </nav>
+
+        <header class="header">
+            <h1 class="header__heading">
+                <span class="header__heading--sub">Weather in</span>
+                <span class="header__heading--main">Your City</span>
+            </h1>
+        </header>
+        <form class="search">
+            <input type="text" class="search__city" maxlength="20" placeholder="city">
+            <input type="text" class="search__country" maxlength="3" placeholder="country">
+            <button class="search__btn">
+                    <svg class="search__icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-search"></use>
+                    </svg>
+            </button>
+        </form>
+
+        <section class="forecast"></section>
+
+        <section class="mobile-forecast"></section>
+
+        <footer class="footer">
+            <div class="copyright">
+                <p class="copyright__author">Built and coded by <a href="mailto:rossty4422@gmail.com">Ross Yatsura</a></p>
+                <p class="copyright__rights">&copy;2018 All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="js/bundle.js"></script>
+    </body>
+</html>
